@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Sans-serif";
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+nav {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+/* Image Buttons Container */
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#img1,
+#img2,
+#img3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#img1 p,
+#img2 p,
+#img3 p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+button.img-btn {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 250px;
+    overflow: hidden;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button.img-btn img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 250px;
+    border: 0.7px solid rgb(50, 49, 49);
+    transition: 0.2s;
+}
+
+button.img-btn img:hover {
+    border: 3px solid rgb(20, 20, 20);
+}
+
+/* Line separator */
+.line {
+    width: 90vw;
+    border: 1px solid grey;
+}
+
+/* Score Section */
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.score h2 {
+    font-size: 2.5rem;
+    color: grey;
+}
+
+.score p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Play Button */
+.play-btn {
+    background-color: rgb(165, 162, 162);
+    width: 30rem;
+    height: 10rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.play-btn:hover {
+    background-color: grey;
+    transition: 0.3s all;
+}

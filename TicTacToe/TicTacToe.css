@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", "Sans-serif";
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2{
+    color: blueviolet;
+    font-size: 3rem;
+}
+
+.AfterWin {
+    display: none;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 0vw;
+    height: 0vh;
+    transition: all;
+}
+
+.All-Boxes {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 330px;
+    aspect-ratio: 1/1;
+    /* min-width: 90vh; */
+}
+
+.box {
+    width: 2rem;
+    /* height: 2rem; */
+    flex: 0 1 calc(33.333% - 10px);
+    /* 3 per row with gap */
+    aspect-ratio: 1 / 1;
+    background-color: blueviolet;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 4rem;
+}
+
+.box:hover {
+    background-color: rgb(22, 22, 83);
+    transition: 0.3s;
+}
+
+.play-btn,
+.Reset-Btn {
+    margin: 1rem 1rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Reset-Btn:hover {
+    background-color: rgb(22, 22, 83);
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background-color: rgb(22, 22, 83);
+    transition: 0.3s;
+
+}
+
+/* @media (max-width: 400px) {
+    .box {
+        flex-grow: 0;
+        flex-shrink: 1;
+        /* width: 70px; */
+/* height: 70px; */
+}
+}

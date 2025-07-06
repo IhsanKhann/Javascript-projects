@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager</title>
+
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .main-container {
+      margin: auto;
+      margin-top: 100px;
+      background-color: blueviolet;
+      width: 60%;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      gap: 10px;
+    }
+
+    #inputBox {
+      flex: 1;
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #addTask {
+      background-color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #addTask:hover {
+      background-color: rgb(34, 245, 34);
+      transition: 0.3s;
+    }
+
+    .fa-plus {
+      font-size: 1rem;
+      color: blueviolet;
+    }
+
+    .TaskList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 30px auto;
+      width: 60%;
+    }
+
+    .TaskList div {
+      background-color: blueviolet;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .TaskList span {
+      flex: 1;
+    }
+
+    .button-group button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 1.3rem;
+      color: white;
+    }
+
+    .button-group i {
+      pointer-events: none; /* icon won't block button click */
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="main-container">
+    <input id="inputBox" placeholder="Enter your task here:" />
+    <button id="addTask"><i class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <div class="TaskList"></div>
+
+  <script>
+    let addTaskBtn = document.getElementById('addTask');
+    let input = document.getElementById('inputBox');
+    let taskList = document.querySelector('.TaskList');
+
+    addTaskBtn.addEventListener("click", function () {
+      let taskText = input.value.trim();
+      if (taskText !== "") {
+        let newTask = document.createElement('div');
+        newTask.innerHTML = `
+          <span>${taskText}</span>
+          <div class="button-group">
+              <button class="complete-btn"><i class="fa-solid fa-square-check"></i></button>
+              <button class="delete-btn"><i class="fa-solid fa-dumpster"></i></button>
+          </div>
+        `;
+
+        taskList.appendChild(newTask);
+        input.value = "";
+
+        // Button actions (inside current task only)
+        let deleteBtn = newTask.querySelector('.fa-dumpster');
+        let checkBtn = newTask.querySelector('.fa-square-check');
+
+        deleteBtn.addEventListener("click", function () {
+            newTask.remove();
+        });
+
+        checkBtn.addEventListener("click", function () {
+            let taskSpan = newTask.querySelector('span');
+            // taskSpan.style.textDecoration =
+            taskSpan.style.textDecoration === "line-through" ? "none" : "line-through";
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

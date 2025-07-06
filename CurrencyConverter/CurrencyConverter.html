@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Currency converter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CurrencyConverter.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h2> Currency converter </h2>
+            <p> Enter amount </p>
+
+            <input value="100" , name="amount">
+            <div class="select-container">
+                <div class="from">
+                    <p> From: </p>
+                    <img src="https://flagsapi.com/US/flat/64.png">
+                    <select name="from">
+                        <option value="PKR"> PKR </option>
+                        <option value="INR"> INR </option>
+                        <option value="USD" selected> USD</option>
+                        <option value="EUR"> EUR </option>
+                    </select>
+                </div>
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <div class="to">
+                    <p> To: </p>
+                    <img src="https://flagsapi.com/PK/flat/64.png">
+                    <select name="to">
+                        <option value="PKR" selected> PKR </option>
+                        <option value="INR"> INR </option>
+                        <option value="USD"> USD</option>
+                        <option value="EUR"> EUR </option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="ExchangeRate"> 1USD = 280 PKR </p>
+            <button id="ExchangeBtn" type="submit"> Get Exchange Rate</button>
+        </form>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

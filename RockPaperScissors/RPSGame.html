@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="RPSGame.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+</head>
+
+<body>
+  <nav>
+    <p>Rock Paper Scissors</p>
+  </nav>
+
+  <div class="main">
+    <div class="images">
+      <div id="img1">
+        <button class="img-btn" value="rock">
+          <img src="rock.png" alt="Image couldn't be loaded" />
+        </button>
+        <p>Rock</p>
+      </div>
+
+      <div id="img2">
+        <button class="img-btn" value="paper">
+          <img src="paper.png" alt="Image couldn't be loaded" />
+        </button>
+        <p>Paper</p>
+      </div>
+
+      <div id="img3">
+        <button class="img-btn" value="scissors">
+          <img src="scissors.png" alt="Image couldn't be loaded" />
+        </button>
+        <p>Scissors</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="score">
+      <h2>Score</h2>
+      <p id="yourScore">You</p>
+      <p id="computerScore">Computer</p>
+    </div>
+
+    <button class="play-btn"> Check Score </button>
+  </div>
+
+  <script src="RPSGame.js"></script>
+</body>
+
+</html>

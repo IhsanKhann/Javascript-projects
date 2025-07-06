@@ -1,0 +1,62 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'poppins', 'sans-serif';
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.Main-Container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 15px;
+    font-size: .8rem;
+    width: 60%;
+    height: 50%;
+    background-color: blueviolet;
+    color: white;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Main-Container p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Main-Container p::after{
+    padding-right: 20px;
+    font-size: 20px;
+    content: '+' ;
+}
+
+.answer {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.answer.active {
+    height: 150px; /* or use auto with max-height for dynamic height */
+}
+
+.active .question ::after{
+    font-size: 1rem;
+    content: "-";
+}
+
+.active .question p::after{
+    font-size: .8rem;
+}
+
+.item{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+

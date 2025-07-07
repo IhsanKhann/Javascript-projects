@@ -82,4 +82,4 @@ ExchangeBtn.addEventListener("click", ExchangeRates);
 // how to add options to the select using javaScript
 // eventSelectors.
 
-console.log("Currency Converter Loaded");
+console.log("Currency Converter Loaded again");
